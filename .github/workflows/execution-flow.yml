@@ -77,6 +77,7 @@ jobs:
         run: echo "Deploying..."
   #this job runs if any previous job fails
   report:
+    needs: [lint, deploy] # it must wait till other job has some outcome, otherwise running parallely wont do the purpose
     if: failure()
     runs-on: ubuntu-latest
     steps:
