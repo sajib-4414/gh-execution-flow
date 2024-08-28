@@ -14,7 +14,8 @@ jobs:
       - name: Get code
         uses: actions/download-artifact@v3
         with:
-          name: ${{ inputs.artifact-name }}# we want the name, the name of other workflow generated code/artifact files. instead of hardcode name
+          name: ${{ inputs.artifact-name }}
+      # we want the name, the name of other workflow generated code/artifact files. instead of hardcode name
       - name: List files
         run: ls
       - name: Output information
