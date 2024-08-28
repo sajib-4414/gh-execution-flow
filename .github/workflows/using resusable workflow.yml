@@ -68,7 +68,7 @@ jobs:
           path: dist
   deploy:
     needs: build
-    uses: ./.github/workflows/resusable.yml
+    uses: ./.github/workflows/reusable.yml
 
   #this job runs if any previous job fails
   report:
